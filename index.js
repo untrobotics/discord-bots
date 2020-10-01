@@ -1,6 +1,7 @@
 const Discord = require('discord.js')
 const config = require('dotenv').config().parsed
 const {spacebotHandler} = require("./spaceBot/spacebot")
+const {eventbotHandler} = require("./eventBot/eventbot")
 
 const client = new Discord.Client();
 
@@ -16,6 +17,9 @@ client.on('message', msg => {
     switch (key) {
       case "space":
         spacebotHandler(msg);
+        break;
+      case "event":
+        eventbotHandler(msg);
         break;
       default:
         break;
