@@ -1,7 +1,7 @@
 const Discord = require('discord.js')
 const config = require('dotenv').config().parsed
-const {spacebotHandler} = require("./spaceBot/spacebot")
-const {eventbotHandler} = require("./eventBot/eventbot")
+const { spacebotHandler } = require("./spaceBot/spacebot")
+const { eventbotHandler } = require("./eventBot/eventbot")
 
 const client = new Discord.Client();
 
@@ -11,8 +11,8 @@ client.on('ready', () => {
 
 client.on('message', msg => {
   // Only reply to messages with prefix
-  if (msg.content.startsWith(config.PREFIX)){
-    const key = msg.content.replace(config.PREFIX,"");
+  if (msg.content.startsWith(config.PREFIX)) {
+    const key = msg.content.replace(config.PREFIX, "").split(" ")[0];
     console.log(key);
     switch (key) {
       case "space":
@@ -25,7 +25,7 @@ client.on('message', msg => {
         break;
     }
   }
-    
+
   if (msg.content === 'ping') {
     msg.reply('Pong!');
   }
