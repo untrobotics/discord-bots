@@ -1,3 +1,5 @@
+#!/usr/bin/env nodejs
+
 const Discord = require('discord.js')
 const config = require('dotenv').config().parsed
 
