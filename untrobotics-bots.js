@@ -11,8 +11,8 @@ client.on('ready', () => {
 client.on('message', msg => {
   // Only reply to messages with prefix
   if (msg.content.startsWith(config.PREFIX)){
-    const key = msg.content.replace(config.PREFIX,"");
-    console.log(key);
+    const key = msg.content.replace(config.PREFIX,"").split(" ")[0];
+
     switch (key) {
       case "space":
         spacebotHandler(msg);
