@@ -1,7 +1,7 @@
 const Discord = require('discord.js')
 const config = require('dotenv').config().parsed
-const { spacebotHandler } = require("./spaceBot/spacebot")
-const { eventbotHandler } = require("./eventBot/eventbot")
+const { spacebotHandler } = require("./bots/spacebot")
+const { eventbotHandler } = require("./bots/eventbot")
 
 const client = new Discord.Client();
 
