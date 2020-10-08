@@ -14,6 +14,7 @@ client.on('message', msg => {
   if (msg.content.startsWith(config.PREFIX)) {
     const key = msg.content.replace(config.PREFIX, "").split(" ")[0];
     console.log(key);
+
     switch (key) {
       case "space":
         spacebotHandler(msg);
